@@ -6,7 +6,8 @@ from typing import Any
 from aocd.models import Puzzle
 
 __TRANSFORM = {
-    1: lambda x: [int(x) for x in x.splitlines()]
+    1: lambda x: [int(x) for x in x.splitlines()],
+    3: lambda x: (line.split(",") for line in x.splitlines())
 }
 
 
